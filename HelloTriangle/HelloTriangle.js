@@ -1,4 +1,23 @@
-﻿var VSHADER_SOURCE = //Creating a variable called VShader_Source
+﻿/*
+Will's Questions:
+1)what does init stand for?
+2)why do we only need one buffer even though we have multiple colors and points?
+Adan's Answers:
+1) Init is just short for initialize, being used to initialize the shaders, pg 26
+2) The reason there is only one buffer, is because it handles all the colors, not just singular ones. pg 28
+
+
+Adan's Questions:
+1) Why is it important to create a vertex buffer?
+2) Is it important to have the data for the buffer before or after binding? Or does it not matter?
+Will's Answers:
+1) It is important to create a vertex buffer so that you are able to pass multiple vertices through a single attribute variable. pg 72
+2) The buffer is bound to the shader before any information is passed into it. You have to create the buffer object before you can do this, but the specifications
+of it's contents and which attribute variable is being effected comes after. pg 73
+*/
+
+
+var VSHADER_SOURCE = //Creating a variable called VShader_Source
     'attribute vec4 a_Position;\n' + //assigning a attribute
     'void main() {\n' +
     ' gl_Position = a_Position;\n' + //connecting the GLES code with javascript
